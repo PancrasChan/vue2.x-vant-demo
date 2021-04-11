@@ -1,5 +1,5 @@
 const getters = {
-  username: state => state.userInfo.username,
+  username: (state) => state.userInfo.username,
 };
 
 export default getters;

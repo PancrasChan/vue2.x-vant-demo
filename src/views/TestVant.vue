@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>这是一个全局less变量测试</p>
     <van-button type="primary" text="测试定制主题按钮" />
   </div>
 </template>
@@ -14,4 +15,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="less" scoped>
+p {
+  color: @primary;
+}
+</style>
