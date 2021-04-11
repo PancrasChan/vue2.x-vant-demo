@@ -17,7 +17,7 @@ module.exports = {
     },
   },
   chainWebpack: config => {
-    // 添加别名
+    // 添加src模块文件夹别名
     config.resolve.alias
       .set("vue$", "vue/dist/vue.esm.js")
       .set("@", resolve("src"))
@@ -30,5 +30,14 @@ module.exports = {
       .set("@store", resolve("src/store"))
       .set("@utils", resolve("src/utils"))
       .set("@views", resolve("src/views"));
+
+    // 使用svg-sprite-loader加载svg图标
+    config.module.rule("svg")
+      .uses.clear().end()
+      .exclude.add(resolve("node_modules")).end().include.add(resolve("src/icons")).end()
+      .test(/\.svg$/).use("svg-sprite-loader").loader("svg-sprite-loader")
+      .options({symbolId: "icon-[name]"});
+    // 普通图片排除icons目录
+    config.module.rule("images").test(/\.(png|jpe?g|gif|svg)(\?.*)?$/).exclude.add(resolve("src/icons")).end();
   }
 };
