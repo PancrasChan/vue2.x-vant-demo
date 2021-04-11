@@ -15,4 +15,9 @@ export default [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: "/testvant",
+    name: "TestVant",
+    component: () => import(/* webpackChunkName: "test" */ "@views/TestVant"),
+  },
 ];

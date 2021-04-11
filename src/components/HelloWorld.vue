@@ -99,12 +99,17 @@
         >
       </li>
     </ul>
+    <van-button type="primary" text="测试按钮" />
   </div>
 </template>
 
 <script>
+import { Button } from "vant";
 export default {
   name: "HelloWorld",
+  components: {
+    [Button.name]: Button,
+  },
   props: {
     msg: String,
   },
