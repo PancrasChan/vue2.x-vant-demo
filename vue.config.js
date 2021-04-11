@@ -62,4 +62,4 @@ module.exports = {
       .exclude.add(resolve("src/icons"))
       .end();
   },
-}
+};

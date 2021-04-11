@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "@/icons";
-// vant组件定制主题
+// vant组件主题less样式文件
 import "vant/lib/index.less";
 
 Vue.config.productionTip = false;
