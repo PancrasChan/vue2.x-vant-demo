@@ -1,5 +1,5 @@
 import Vue from "vue";
-import SvgIcon from "@/components/base/svg-icon/svg-icon";
+import SvgIcon from "@components/base/svg-icon/svg-icon";
 
 // 注册到全局
 Vue.component("svg-icon", SvgIcon);
