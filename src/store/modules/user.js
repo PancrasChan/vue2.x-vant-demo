@@ -1,8 +1,12 @@
 import { SET_USER_INFO } from "../mutation-types";
 
+// eslint-disable-next-line no-unused-vars
 const user = {
   state: {
-    userInfo: {},
+    userInfo: {
+      username: "",
+      realName: "",
+    },
   },
   mutations: {
     [SET_USER_INFO](state, user) {
