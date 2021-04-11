@@ -3,6 +3,14 @@ const path = require("path");
 const resolve = (dir) => path.join(__dirname, dir);
 
 module.exports = {
+  // 全局引入less样式变量配置
+  pluginOptions: {
+    "style-resources-loader": {
+      preProcessor: "less",
+      patterns: [resolve("./src/assets/less/global-variable.less")],
+    },
+  },
+
   css: {
     loaderOptions: {
       less: {
@@ -53,12 +61,5 @@ module.exports = {
       .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
       .exclude.add(resolve("src/icons"))
       .end();
-  },
-
-  pluginOptions: {
-    "style-resources-loader": {
-      preProcessor: "less",
-      patterns: [resolve("./src/assets/less/global-variable.less")],
-    },
   },
 }
