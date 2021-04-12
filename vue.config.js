@@ -62,4 +62,11 @@ module.exports = {
       .exclude.add(resolve("src/icons"))
       .end();
   },
+  devServer: {
+    // 设置本地主机地址'0.0.0.0'
+    host: "0.0.0.0",
+    // 代理端口
+    port: "3001",
+    https: false,
+  }
 };

@@ -1,7 +1,7 @@
 import axios from "axios";
 // eslint-disable-next-line no-unused-vars
 import router from "@router";
-import { lsGet, lsSet, TOKEN } from "../api/ls";
+import { TOKEN } from "@utils/constant";
 import { Toast } from "vant";
 import { isEmptyString } from "@utils/util";
 let axiosInstance = axios.create({
@@ -13,7 +13,7 @@ axiosInstance.interceptors.request.use(
   (config) => {
     // 从本地获取token, 并判断token是否为空
     // 此逻辑需要重新评定
-    const token = lsGet(TOKEN);
+    const token = localStorage.getItem(TOKEN);
     if (!isEmptyString(token)) {
       config.headers.common["X-Access-Token"] = token;
     }
@@ -33,7 +33,8 @@ axiosInstance.interceptors.response.use(
     // 如果后端有新的token则重新缓存
     let newToken = response.headers["new-token"];
     if (newToken) {
-      lsSet(TOKEN, newToken);
+      localStorage.setItem(TOKEN, newToken);
+      // lsSet(TOKEN, newToken);
     }
     return response.data;
   },

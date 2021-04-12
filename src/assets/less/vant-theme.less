@@ -1,5 +1,5 @@
 // Color Palette
-//@import "./global-variable.less";
+@import "./global-variable.less";
 @black: #000;
 @white: #fff;
 @gray-1: #f7f8fa;
@@ -11,12 +11,11 @@
 @gray-7: #646566;
 @gray-8: #323233;
 @red: #ee0a24;
-//@blue: #1989fa;
-@blue: @primary;
+@blue: #1989fa;
 @orange: #ff976a;
 @orange-dark: #ed6a0c;
 @orange-light: #fffbe8;
-@green: #07c160;
+@green: @primary;
 
 // Gradient Colors
 @gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
@@ -40,10 +39,10 @@
 @padding-xl: @padding-base * 8;
 
 // Font
-@font-size-xs: 10px;
-@font-size-sm: 12px;
-@font-size-md: 14px;
-@font-size-lg: 16px;
+//@font-size-xs: 10px;
+//@font-size-sm: 12px;
+//@font-size-md: 14px;
+//@font-size-lg: 16px;
 @font-weight-bold: 500;
 @line-height-xs: 14px;
 @line-height-sm: 18px;
@@ -70,10 +69,11 @@ sans-serif;
 @border-radius-max: 999px;
 
 // nav-bar
-@nav-bar-icon-color: #f00;
-@nav-bar-title-text-color: @primary;
+@nav-bar-icon-color: @green;
+@nav-bar-text-color: @green;
+//@nav-bar-title-text-color: @primary;
 // button
-@button-primary-background-color: @primary;
+//@button-primary-background-color: @primary;
 // cell
 @cell-value-color: @primary;
 @cell-text-color: @primary;

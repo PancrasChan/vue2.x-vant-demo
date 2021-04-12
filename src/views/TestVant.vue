@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import { Cell, Button, NavBar } from "vant";
+// import { Cell, Button, NavBar } from "vant";
 export default {
   name: "TestVant",
-  components: {
-    [Cell.name]: Cell,
-    [Button.name]: Button,
-    [NavBar.name]: NavBar,
-  },
+  // components: {
+  //   [Cell.name]: Cell,
+  //   [Button.name]: Button,
+  //   [NavBar.name]: NavBar,
+  // },
 };
 </script>
 
