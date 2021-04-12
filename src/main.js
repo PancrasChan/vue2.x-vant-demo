@@ -6,6 +6,9 @@ import "@/icons";
 import Vant from "@configs/vant";
 // vant组件主题less样式文件
 import "vant/lib/index.less";
+if(process.env.NODE_ENV === 'development'){
+  require("./mock");
+}
 
 Vue.config.productionTip = false;
 Vue.use(Vant);

@@ -3,21 +3,30 @@
     <van-nav-bar left-arrow left-text="返回" title="测试标题" />
     <van-cell title="姓名" value="张三" />
     <div class="container02">
-      <p>这是一个全局less变量测试</p>
+      <p>{{ username }}</p>
       <van-button type="primary" text="测试定制主题按钮" />
     </div>
   </div>
 </template>
 
 <script>
-// import { Cell, Button, NavBar } from "vant";
+import store from "@store";
+import { mapGetters } from "vuex";
+import { USER_LOGIN } from "@store/mutation-types";
 export default {
   name: "TestVant",
-  // components: {
-  //   [Cell.name]: Cell,
-  //   [Button.name]: Button,
-  //   [NavBar.name]: NavBar,
-  // },
+  computed: {
+    // ...mapState({
+    //   username: (state) => state.user.userInfo.username,
+    // }),
+    ...mapGetters(["username"]),
+  },
+  created() {
+    store.dispatch(USER_LOGIN).then((res) => {
+      console.log("返回的结果是", res);
+    });
+  },
+  methods: {},
 };
 </script>
 

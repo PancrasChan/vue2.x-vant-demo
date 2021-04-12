@@ -6,9 +6,9 @@ let userInfo = {
 export default {
   "post|/sys/login": () => {
     return {
-      status: 200,
+      code: 200,
       message: "请求成功",
-      data: userInfo,
+      result: userInfo,
     };
   },
 };
