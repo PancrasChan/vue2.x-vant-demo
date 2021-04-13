@@ -3,14 +3,8 @@ const path = require("path");
 const resolve = (dir) => path.join(__dirname, dir);
 
 module.exports = {
+  publicPath: process.env.VUE_APP_PUBLIC_PATH,
   // 全局引入less样式变量配置
-  pluginOptions: {
-    "style-resources-loader": {
-      preProcessor: "less",
-      patterns: [resolve("./src/assets/less/global-variable.less")],
-    },
-  },
-
   css: {
     loaderOptions: {
       less: {
@@ -19,11 +13,18 @@ module.exports = {
           // "text-color": "#111",
           // "border-color": "#eee",
           // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
-          hack: `true; @import "${resolve(
+          "hack": `true; @import "${resolve(
             "./src/assets/less/vant-theme.less"
           )}";`,
         },
       },
+    },
+  },
+
+  pluginOptions: {
+    "style-resources-loader": {
+      preProcessor: "less",
+      patterns: [resolve("./src/assets/less/global-variable.less")],
     },
   },
 

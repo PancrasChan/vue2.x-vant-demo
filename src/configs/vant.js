@@ -1,7 +1,7 @@
 // 自动按需引入Vant组件
-import { Cell, Button, NavBar } from "vant";
+import { Cell, Button, NavBar, Tabbar, TabbarItem } from "vant";
 
-let vantUIs = [Cell, Button, NavBar];
+let vantUIs = [Cell, Button, NavBar, Tabbar, TabbarItem];
 
 export default {
   install(Vue) {

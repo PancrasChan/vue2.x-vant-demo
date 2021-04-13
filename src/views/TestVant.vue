@@ -6,6 +6,7 @@
       <p>{{ username }}</p>
       <van-button type="primary" text="测试定制主题按钮" />
     </div>
+    <zt-tab-bar />
   </div>
 </template>
 
@@ -13,8 +14,12 @@
 import store from "@store";
 import { mapGetters } from "vuex";
 import { USER_LOGIN } from "@store/mutation-types";
+import TabBar from "@components/tab-bar/tab-bar";
 export default {
   name: "TestVant",
+  components: {
+    ZtTabBar: TabBar,
+  },
   computed: {
     // ...mapState({
     //   username: (state) => state.user.userInfo.username,
