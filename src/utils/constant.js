@@ -1,1 +1,1 @@
-export const TOKEN = "pension_token";
+export const TOKEN = "token";

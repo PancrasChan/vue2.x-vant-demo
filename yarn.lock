@@ -8800,6 +8800,11 @@ websocket-extensions@>=0.1.1:
   resolved "https://registry.npm.taobao.org/websocket-extensions/download/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
   integrity sha1-f4RzvIOd/YdgituV1+sHUhFXikI=
 
+weixin-js-sdk@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.npm.taobao.org/weixin-js-sdk/download/weixin-js-sdk-1.6.0.tgz#ff50484d8118ce1208f11248cf4a1c0831577514"
+  integrity sha1-/1BITYEYzhII8RJIz0ocCDFXdRQ=
+
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/which-boxed-primitive/download/which-boxed-primitive-1.0.2.tgz#13757bc89b209b049fe5d86430e21cf40a89a8e6"
