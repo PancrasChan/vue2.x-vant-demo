@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "@/icons";
-import Vant from "@configs/vant";
+import "@configs";
 // vant组件主题less样式文件
 import "vant/lib/index.less";
 if(process.env.NODE_ENV === 'development'){
@@ -11,7 +11,6 @@ if(process.env.NODE_ENV === 'development'){
 }
 
 Vue.config.productionTip = false;
-Vue.use(Vant);
 
 new Vue({
   router,
